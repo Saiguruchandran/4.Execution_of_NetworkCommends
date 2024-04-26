@@ -25,8 +25,9 @@ This commands includes
 <BR>
 • Other IP Commands e.g. show ip route etc.
 <BR>
-## PROGRAM
-## CLIENT:
+### PROGRAM
+### CLIENT:
+```
 import socket 
 from pythonping import ping 
 s=socket.socket() 
@@ -39,7 +40,9 @@ while True:
         c.send(str(ping(hostname, verbose=False)).encode()) 
     except KeyError: 
         c.send("Not Found".encode())
-## SERVER:
+        ```
+### SERVER:
+```
 import socket 
 s=socket.socket() 
 s.connect(('localhost',8000)) 
@@ -47,9 +50,10 @@ while True:
     ip=input("Enter the website you want to ping ") 
     s.send(ip.encode()) 
     print(s.recv(1024).decode())
-## OUTPUT
-## PING COMMAND:
-## CLIENT:
+    ```
+###OUTPUT
+### PING COMMAND:
+### CLIENT:
 ![image](https://github.com/23002027/4.Execution_of_NetworkCommends/assets/139752981/77643755-1234-447a-bd60-1e62d05ce6d3)
 
 ## SERVER:
