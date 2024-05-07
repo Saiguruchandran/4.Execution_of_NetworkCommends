@@ -27,6 +27,7 @@ This commands includes
 <BR>
 
 ## PROGRAM
+## PING COMMAND:
 ## CLIENT:
 ```
 import socket 
@@ -52,6 +53,15 @@ while True:
     s.send(ip.encode()) 
     print(s.recv(1024).decode())
 ```
+## TRACERT COMMAND:
+
+```
+from scapy.all import *
+target = ["www.google.com"]
+result, unans = traceroute(target,maxttl=32)
+print(result,unans)
+```
+
 ## OUTPUT:
 ## PING COMMAND:
 ## CLIENT:
